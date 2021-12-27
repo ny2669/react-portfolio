@@ -25,20 +25,36 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
+    
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+
+
+    
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=M+PLUS+2:wght@500&family=Merriweather:wght@700&family=Playfair+Display:wght@600;700&family=Raleway:ital,wght@0,100;1,200&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>React portfolio</title>
   </head>
-  <body>
+  <body >
    
     <div id="root"></div>
 
     <img src="../images/logo.png" alt="">
-   
+<script>
+    new fullpage('#fullpage', {
+      //options here
+      autoScrolling:true,
+      scrollHorizontally: true
+    });
 
+    </script>
+   
+    <script type="text/javascript" src="fullpage.js"></script>
     <script src="../src/index.js"></script>
+   
+    
+   
   </body>
 </html>

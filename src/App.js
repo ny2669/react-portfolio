@@ -1,19 +1,27 @@
-import React, {useState} from 'react'
-import {Link, Routes, Route} from "react-router-dom"
+import React, {useState, useEffect} from 'react'
+import {Routes, Route} from "react-router-dom"
 
-import Header from './components/Header'
+import Header from './components/NavBar'
 import Footer from './components/Footer'
-import About from './components/About'
-import Service from './components/Service'
-import Skills from './components/Skills'
-
+import About from './pages/About'
+import Experience from './pages/Experience'
+import Projects from './pages/Projects'
+import Header2 from './pages/Header2'
+import Home from './Home'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 
 
 export default function App() {
  
- 
+  useEffect(()=>{
+
+        Aos.init({duration: 2000})
+      
+       }, [])
+
  
   return (
     <>
@@ -21,21 +29,19 @@ export default function App() {
     <div className="conainer-main">
 
 
+<Routes>
+<Route exact path="/" element={<Header2/>}></Route>
+  <Route path="/about" element={<About/>}></Route>
+  <Route path="/experience" element={<Experience/>}></Route>
+  <Route path="/projects" element={<Projects/>}></Route>
+  <Route path="/home" element={<Home/>}></Route>
 
-
-
-
-
- 
-  <About />
-
-     <Skills/>
-     <Service/>
-
-    
-      <Footer/> 
-    
+</Routes>
+<Footer/> 
     </div>
+    
+   
+
 </>
   )
 }
